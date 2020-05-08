@@ -178,7 +178,7 @@ namespace Avalonia.Media
                 radiusY = Math.Min(radiusY, rect.Height / 2);
             }
 
-            if ((pen is null || (pen != null && pen.IsRenderValid())) && rect.IsRenderValid() && radiusX.IsRenderValid() && radiusY.IsRenderValid())
+            if ((pen is null || (pen != null && pen.IsRenderValid())) && rect.IsRenderValid() && radiusX.IsRenderValid() && radiusY.IsRenderValid() && boxShadow.IsRenderValid()) 
             {
                 PlatformImpl.DrawRectangle(brush, pen, new RoundedRect(rect, radiusX, radiusY), boxShadow);
             }
